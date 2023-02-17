@@ -1,8 +1,8 @@
 # Debian-titus
 Debian customizations from Chris Titus Tech
+Further customizations and corrections by dragontwosix
  
 ## Requirements
-_This install changes Debian to the SID (Dev) Branch_
 
 ### Download Debian non-free netinstall
 
@@ -12,7 +12,7 @@ Use the following Debian ISO as the base <https://cdimage.debian.org/cdimage/uno
 ### To install:
 
 ```
-git clone https://github.com/ChrisTitusTech/debian-titus
+git clone https://github.com/dragontwosix/debian-titus
 cd debian-titus
 sudo ./install.sh
 ```
