@@ -16,13 +16,13 @@ super + Escape
 
 # My program Hotkeys
 super + b
-	brave-browser
+	firefox-esr
 
 super + p 
-	flameshot full -p /home/titus/SynologyDrive/Screenshots/
+	flameshot full -p ~/SynologyDrive/Screenshots/
 
 super + shift + p
-	flameshot gui -p /home/titus/SynologyDrive/Screenshots/
+	flameshot gui -p ~/SynologyDrive/Screenshots/
 
 #
 # bspwm hotkeys
