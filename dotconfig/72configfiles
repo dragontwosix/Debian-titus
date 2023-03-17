@@ -1,0 +1,5 @@
+Dpkg::Options {
+   "--force-confask";
+   "--force-confnew";
+   "--force-confmiss";
+}
