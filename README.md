@@ -1,7 +1,7 @@
 # Debian-titus
 Debian customizations from Chris Titus Tech
 
-Chris's repo is now using dwm, this repo will remain bspawn for now
+Chris' repo is now using dwm, this repo will remain bspawn for now
 
 Further customizations and corrections by dragontwosix
  
