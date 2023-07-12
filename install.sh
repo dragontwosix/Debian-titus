@@ -36,6 +36,10 @@ tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 mv /home/$username/.config/sddm.conf /etc/sddm.conf
 mv /home/$username/.config/72configfiles /etc/apt/apt.conf.d/
 
+# Installing localepurge
+nala install localepurge
+# Configuring localepurge
+dpkg-reconfigure localepurge
 # Installing sugar-candy dependencies
 nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
 # Installing Essential Programs 
@@ -46,10 +50,11 @@ nala install neofetch flameshot psmisc mangohud vim lxappearance papirus-icon-th
 # Download Nordic Theme
 cd /usr/share/themes/
 git clone https://github.com/EliverLara/Nordic.git
+git clone https://github.com/the-zero885/Nord-Openbox-theme.git
 
 # Installing fonts
 cd $builddir 
-nala install fonts-font-awesome
+nala install fonts-font-awesome -y
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
@@ -70,9 +75,12 @@ cd $builddir
 rm -rf Nordzy-cursors
 
 # Install brave-browser
-sudo nala install apt-transport-https curl -y
-sudo nala update
-sudo nala install firefox-esr variety command-not-found -y
+nala install apt-transport-https curl -y
+nala update
+nala install firefox-esr variety command-not-found bash-completion unattended-upgrades -y
+
+# Configure unattended-upgrades
+dpkg-reconfigure unattended-upgrades
 
 # Enable graphical login and change target from CLI to GUI
 systemctl enable sddm
