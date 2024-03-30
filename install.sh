@@ -35,6 +35,8 @@ chown -R $username:$username /home/$username
 tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 mv /home/$username/.config/sddm.conf /etc/sddm.conf
 mv /home/$username/.config/72configfiles /etc/apt/apt.conf.d/
+apt-config dump | grep -we Recommends -e Suggests | sed s/1/0/ | tee /etc/apt/apt.conf.d/73norecommend
+
 
 # Installing localepurge
 nala install localepurge
