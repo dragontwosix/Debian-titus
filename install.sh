@@ -43,7 +43,7 @@ nala install localepurge
 # Configuring localepurge
 dpkg-reconfigure localepurge
 # Installing sugar-candy dependencies
-nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
+nala install libqt6svg6 qml6-module-qtquick-controls -y
 # Installing Essential Programs 
 nala install feh bspwm sxhkd kitty rofi polybar thunar lxpolkit x11-xserver-utils unzip wget pipewire-pulse wireplumber pavucontrol build-essential mesa-common-dev -y
 # Installing Other less important Programs
